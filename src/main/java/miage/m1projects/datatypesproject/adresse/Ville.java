@@ -9,12 +9,22 @@ package miage.m1projects.datatypesproject.adresse;
  * @author seb56100
  */
 public class Ville {
+    private String nom;
     private int indicateurTel;
     private Pays pays;
     
-    public Ville(int indicateurTel, Pays pays){
+    public Ville(String nom, int indicateurTel, Pays pays){
+        this.nom = nom;
         this.indicateurTel = indicateurTel;
         this.pays = pays;
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
     }
 
     public void setPays(Pays pays) {

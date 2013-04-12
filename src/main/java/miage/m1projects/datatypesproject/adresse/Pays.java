@@ -10,10 +10,12 @@ package miage.m1projects.datatypesproject.adresse;
  */
 public class Pays {
     
+    private String nom;
     private int nbChiffreTel;
     private int indicateurTel;
     
-    public Pays(int nbChiffreTel, int indicateurTel){
+    public Pays(String nom, int nbChiffreTel, int indicateurTel){
+        this.nom = nom;
         this.indicateurTel = indicateurTel;
         this.nbChiffreTel = nbChiffreTel;
     }
@@ -32,6 +34,14 @@ public class Pays {
 
     public void setIndicateurTel(int indicateurTel) {
         this.indicateurTel = indicateurTel;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
     
     
