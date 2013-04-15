@@ -1,4 +1,4 @@
-package miage.m1projects.datatypesproject.ressource;
+package miage.Ressource;
 
 public class Ressource
 {
@@ -12,6 +12,6 @@ public class Ressource
    * @element-type Ressource
    */
     public Ressource utilise;
-    public Réservation concerne;
+    public Reservation concerne;
 
 }
