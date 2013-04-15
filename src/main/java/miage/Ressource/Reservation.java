@@ -1,7 +1,7 @@
 package miage.Ressource;
 
 import java.util.Vector;
-import miage.m1projects.datatypesproject.tempo.Intervalle;
+import miage.Temporel.Intervalle;
 
 public class Reservation {
 
