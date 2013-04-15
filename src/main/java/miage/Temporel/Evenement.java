@@ -1,4 +1,4 @@
-package miage.m1projects.datatypesproject.tempo;
+package miage.Temporel;
 
 import java.util.Date;
 
@@ -40,7 +40,4 @@ public class Evenement {
     public void setMyIntervalle(Intervalle myIntervalle) {
         this.myIntervalle = myIntervalle;
     }
-  
-  
-
 }

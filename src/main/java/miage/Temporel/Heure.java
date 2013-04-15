@@ -1,4 +1,4 @@
-package miage.m1projects.datatypesproject.tempo;
+package miage.Temporel;
 
 public class Heure
 {

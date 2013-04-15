@@ -1,8 +1,8 @@
-package miage.m1projects.datatypesproject.ressource;
+package miage.Ressource;
 
 import java.util.Vector;
 
-public class RessourceMatérielle extends Ressource {
+public class RessourceMaterielle extends Ressource {
 
   public Boolean mobilité;
 

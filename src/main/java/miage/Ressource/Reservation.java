@@ -1,9 +1,9 @@
-package miage.m1projects.datatypesproject.ressource;
+package miage.Ressource;
 
 import java.util.Vector;
 import miage.m1projects.datatypesproject.tempo.Intervalle;
 
-public class Réservation {
+public class Reservation {
 
   public Intervalle intervalle;
 
