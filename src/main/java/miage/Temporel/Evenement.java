@@ -1,14 +1,35 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package miage.Temporel;
 
 import java.util.Date;
 
+/**
+ *
+ * @author john.gdowe
+ */
 public class Evenement {
+    private String nom;
+    private Date date;
+    private String lieu;
+    private Intervalle intervalle;
 
-  private String nom;
-  private Date date;
-  private String lieu;
-  private Intervalle myIntervalle;
+    public Evenement() {
+        this.nom = "Nom de l'événement à renseigner";
+        this.date = new Date();
+        this.lieu = "Lieu de l'événement à renseigner";
+        this.intervalle = new Intervalle(new Heure(0,0), new Heure(0,0));
+    }
 
+    public Evenement(String nom, Date date, String lieu, Intervalle intervalle) {
+        this.nom = nom;
+        this.date = date;
+        this.lieu = lieu;
+        this.intervalle = intervalle;
+    }
+    
     public String getNom() {
         return nom;
     }
@@ -22,7 +43,7 @@ public class Evenement {
     }
 
     public Intervalle getMyIntervalle() {
-        return myIntervalle;
+        return intervalle;
     }
 
     public void setNom(String nom) {
@@ -38,6 +59,6 @@ public class Evenement {
     }
 
     public void setMyIntervalle(Intervalle myIntervalle) {
-        this.myIntervalle = myIntervalle;
+        this.intervalle = myIntervalle;
     }
 }

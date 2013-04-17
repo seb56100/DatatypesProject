@@ -1,4 +1,4 @@
-package miage.m1projects.datatypesproject;
+
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -66,4 +66,8 @@ public class TauxConversion
     public void setDeviseSortie(Devise deviseSortie) {
         this.deviseSortie = deviseSortie;
     }
+    
+    public Devise convertir(){
+        return null;   
+    }
 }
