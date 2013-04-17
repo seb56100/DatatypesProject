@@ -1,7 +1,15 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package miage.Finance;
 
 import java.util.Date;
 
+/**
+ *
+ * @author john.gdowe
+ */
 public class TauxConversion
 {
     private String nomTaux;

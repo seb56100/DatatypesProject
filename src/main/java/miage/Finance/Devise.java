@@ -1,15 +1,22 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package miage.Finance;
 
 import java.util.Date;
 
-public class Devise
-{
+/**
+ *
+ * @author john.gdowe
+ */
+public class Devise {
+
     private String nom;
     private String pays;
     private Date date;
-    
-    public Devise(String nom, String pays, Date date)
-    {
+
+    public Devise(String nom, String pays, Date date) {
         this.nom = nom;
         this.pays = pays;
         this.date = date;
