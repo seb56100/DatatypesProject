@@ -17,6 +17,9 @@ import static org.junit.Assert.*;
  */
 public class IntervalleTest {
     
+    //  Intervalle de test
+    private Intervalle it;
+    
     public IntervalleTest() {
     }
     
@@ -30,6 +33,7 @@ public class IntervalleTest {
     
     @Before
     public void setUp() {
+        it = new Intervalle(new Heure(9,0), new Heure(12, 0));
     }
     
     @After
@@ -88,5 +92,16 @@ public class IntervalleTest {
         instance.sethFin(hFin);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of dureeEnMinutes method, of class Intervalle.
+     */
+    @Test
+    public void testDureeEnMinutes() {
+        System.out.println("dureeEnMinutes");
+        int expResult = 180;
+        int result = it.dureeEnMinutes();
+        assertEquals(expResult, result);
     }
 }

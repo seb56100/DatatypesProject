@@ -17,6 +17,8 @@ import static org.junit.Assert.*;
  * @author john.gdowe
  */
 public class EvenementTest {
+    //  Evenement de test
+    private Evenement myEvent;
     
     public EvenementTest() {
     }
@@ -31,6 +33,7 @@ public class EvenementTest {
     
     @Before
     public void setUp() {
+        myEvent = new Evenement("Forum MIAGE", "15/11/2012", "Faculté des sciences", new Intervalle(new Heure(9,0), new Heure(13,0)));
     }
     
     @After
@@ -43,7 +46,7 @@ public class EvenementTest {
     @Test
     public void testGetNom() {
         System.out.println("getNom");
-        Evenement instance = new Evenement();
+        Evenement instance = null;
         String expResult = "";
         String result = instance.getNom();
         assertEquals(expResult, result);
@@ -57,9 +60,9 @@ public class EvenementTest {
     @Test
     public void testGetDate() {
         System.out.println("getDate");
-        Evenement instance = new Evenement();
-        Date expResult = null;
-        Date result = instance.getDate();
+        Evenement instance = null;
+        String expResult = null;
+        String result = instance.getDate();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -71,7 +74,7 @@ public class EvenementTest {
     @Test
     public void testGetLieu() {
         System.out.println("getLieu");
-        Evenement instance = new Evenement();
+        Evenement instance = null;
         String expResult = "";
         String result = instance.getLieu();
         assertEquals(expResult, result);
@@ -80,14 +83,14 @@ public class EvenementTest {
     }
 
     /**
-     * Test of getMyIntervalle method, of class Evenement.
+     * Test of getIntervalle method, of class Evenement.
      */
     @Test
-    public void testGetMyIntervalle() {
-        System.out.println("getMyIntervalle");
-        Evenement instance = new Evenement();
+    public void testGetIntervalle() {
+        System.out.println("getIntervalle");
+        Evenement instance = null;
         Intervalle expResult = null;
-        Intervalle result = instance.getMyIntervalle();
+        Intervalle result = instance.getIntervalle();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -100,7 +103,7 @@ public class EvenementTest {
     public void testSetNom() {
         System.out.println("setNom");
         String nom = "";
-        Evenement instance = new Evenement();
+        Evenement instance = null;
         instance.setNom(nom);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -112,8 +115,8 @@ public class EvenementTest {
     @Test
     public void testSetDate() {
         System.out.println("setDate");
-        Date date = null;
-        Evenement instance = new Evenement();
+        String date = null;
+        Evenement instance = null;
         instance.setDate(date);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -126,22 +129,32 @@ public class EvenementTest {
     public void testSetLieu() {
         System.out.println("setLieu");
         String lieu = "";
-        Evenement instance = new Evenement();
+        Evenement instance = null;
         instance.setLieu(lieu);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setMyIntervalle method, of class Evenement.
+     * Test of setIntervalle method, of class Evenement.
      */
     @Test
-    public void testSetMyIntervalle() {
-        System.out.println("setMyIntervalle");
+    public void testSetIntervalle() {
+        System.out.println("setIntervalle");
         Intervalle myIntervalle = null;
-        Evenement instance = new Evenement();
-        instance.setMyIntervalle(myIntervalle);
+        Evenement instance = null;
+        instance.setIntervalle(myIntervalle);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of détailsEvenements method, of class Evenement.
+     */
+    @Test
+    public void testDetailsEvenements() {
+        System.out.println("detailsEvenements");
+        String sExpected = "L'événement 'Forum MIAGE'  se déroulera le 15/11/2012. Lieu : Faculté des sciences. Durée : 240 minutes.";
+        assertTrue(sExpected.equals(myEvent.detailsEvenements()));
     }
 }

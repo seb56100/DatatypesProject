@@ -68,11 +68,8 @@ public class HeureTest {
     @Test
     public void testSetHeures() {
         System.out.println("setHeures");
-        Integer heures = null;
-        Heure instance = null;
-        instance.setHeures(heures);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        h1.setHeures(18);
+        assertEquals((Integer)18, (Integer)h1.getHeures());
     }
 
     /**
@@ -80,13 +77,17 @@ public class HeureTest {
      */
     @Test
     public void testGetMinutes() {
-        System.out.println("getMinutes");
-        Heure instance = null;
-        Integer expResult = null;
-        Integer result = instance.getMinutes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //  Test du premier constructeur
+        System.out.println("getMinutes - Constructeur 1");
+        Integer expResult1 = 28;
+        Integer result1 = h1.getMinutes();
+        assertEquals(expResult1, result1);
+        
+        //  Test du deuxième constructeur
+        System.out.println("getMinutes - Constructeur 2");
+        Integer expResult2 = 30;
+        Integer result2 = h2.getMinutes();
+        assertEquals(expResult2, result2);
     }
 
     /**
@@ -95,11 +96,8 @@ public class HeureTest {
     @Test
     public void testSetMinutes() {
         System.out.println("setMinutes");
-        Integer minutes = null;
-        Heure instance = null;
-        instance.setMinutes(minutes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        h1.setMinutes(25);
+        assertEquals((Integer)25, (Integer)h1.getMinutes());
     }
 
     /**
@@ -107,13 +105,17 @@ public class HeureTest {
      */
     @Test
     public void testGetSecondes() {
-        System.out.println("getSecondes");
-        Heure instance = null;
-        Integer expResult = null;
-        Integer result = instance.getSecondes();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //  Test du premier constructeur
+        System.out.println("getSecondes - Constructeur 1");
+        Integer expResult1 = 10;
+        Integer result1 = h1.getSecondes();
+        assertEquals(expResult1, result1);
+        
+        //  Test du deuxième constructeur
+        System.out.println("getSecondes - Constructeur 2");
+        Integer expResult2 = 0;
+        Integer result2 = h2.getSecondes();
+        assertEquals(expResult2, result2);
     }
 
     /**
@@ -122,10 +124,17 @@ public class HeureTest {
     @Test
     public void testSetSecondes() {
         System.out.println("setSecondes");
-        Integer secondes = null;
-        Heure instance = null;
-        instance.setSecondes(secondes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        h1.setSecondes(44);
+        assertEquals((Integer)44, (Integer)h1.getSecondes());
+    }
+    
+    /**
+     * Test of donnerHeure method, of class Heure.
+     */
+    @Test
+    public void testDonnerHeure() {
+        System.out.println("donnerHeure");
+        String sExpected = "Il est 15h30min0s";
+        assertTrue(sExpected.equals(h2.donnerHeure()));
     }
 }
