@@ -4,7 +4,7 @@
  */
 package Finance;
 
-import java.util.Date;
+import Adresse.Pays;
 
 /**
  *
@@ -13,9 +13,9 @@ import java.util.Date;
 public class Devise {
 
     private String nom;
-    private String pays;
+    private Pays pays;
 
-    public Devise(String nom, String pays) {
+    public Devise(String nom, Pays pays) {
         this.nom = nom;
         this.pays = pays;
     }
@@ -28,11 +28,11 @@ public class Devise {
         this.nom = nom;
     }
 
-    public String getPays() {
+    public Pays getPays() {
         return pays;
     }
 
-    public void setPays(String pays) {
+    public void setPays(Pays pays) {
         this.pays = pays;
     }
 }

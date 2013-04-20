@@ -4,6 +4,7 @@
  */
 package Finance;
 
+import Adresse.Pays;
 import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -35,8 +36,8 @@ public class TauxConversionTest {
     
     @Before
     public void setUp() {
-        deviseIn = new Devise("Euro", "France");
-        deviseOut = new Devise("Dollar", "USA");
+        deviseIn = new Devise("Euro", new Pays("France", 10, 33));
+        deviseOut = new Devise("Dollar", new Pays("USA", 10, 1));
         
         tauxC = new TauxConversion("Euro - Dollar", (float) 1.3057, "20/04/2013", deviseIn, deviseOut);
     }
