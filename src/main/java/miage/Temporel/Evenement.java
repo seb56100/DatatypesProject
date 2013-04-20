@@ -12,18 +12,11 @@ import java.util.Date;
  */
 public class Evenement {
     private String nom;
-    private Date date;
+    private String date;
     private String lieu;
     private Intervalle intervalle;
 
-    public Evenement() {
-        this.nom = "Nom de l'événement à renseigner";
-        this.date = new Date();
-        this.lieu = "Lieu de l'événement à renseigner";
-        this.intervalle = new Intervalle(new Heure(0,0), new Heure(0,0));
-    }
-
-    public Evenement(String nom, Date date, String lieu, Intervalle intervalle) {
+    public Evenement(String nom, String date, String lieu, Intervalle intervalle) {
         this.nom = nom;
         this.date = date;
         this.lieu = lieu;
@@ -34,7 +27,7 @@ public class Evenement {
         return nom;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -42,7 +35,7 @@ public class Evenement {
         return lieu;
     }
 
-    public Intervalle getMyIntervalle() {
+    public Intervalle getIntervalle() {
         return intervalle;
     }
 
@@ -50,7 +43,7 @@ public class Evenement {
         this.nom = nom;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -58,7 +51,13 @@ public class Evenement {
         this.lieu = lieu;
     }
 
-    public void setMyIntervalle(Intervalle myIntervalle) {
+    public void setIntervalle(Intervalle myIntervalle) {
         this.intervalle = myIntervalle;
+    }
+    
+    //  Renvoie tous les détails de l'événement sous forme d'une chaine
+    public String detailsEvenements() {
+        return "L'événement '" + this.nom + "'  se déroulera le " + this.date
+               + ". Lieu : " + this.lieu + ". Durée : " + this.intervalle.dureeEnMinutes() + " minutes.";
     }
 }

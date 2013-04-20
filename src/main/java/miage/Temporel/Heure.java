@@ -48,4 +48,9 @@ public class Heure {
     public void setSecondes(Integer secondes) {
         this.secondes = secondes;
     }
+    
+    //  Donne l'heure sous forme d'une chaine
+    public String donnerHeure() {
+        return "Il est " + this.getHeures() + "h" + this.getMinutes() + "min" + this.getSecondes() + "s";
+    }
 }

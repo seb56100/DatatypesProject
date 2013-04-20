@@ -8,13 +8,13 @@ package miage.Mesure;
  *
  * @author seb56100
  */
-public class Conversion {
+public class ConversionMesure {
     
     private double echelle;
     private Unite base, resultat;
     
     
-    public Conversion(double echelle, Unite base, Unite resultat){
+    public ConversionMesure(double echelle, Unite base, Unite resultat){
         this.echelle = echelle;
         this.base = base;
         this.resultat = resultat;

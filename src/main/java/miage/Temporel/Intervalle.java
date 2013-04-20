@@ -32,4 +32,10 @@ public class Intervalle {
     public void sethFin(Heure hFin) {
         this.hFin = hFin;
     }
+    
+    //  Retourne la durée en minutes de l'intervalle
+    public int dureeEnMinutes() {
+        return (Integer) (this.hFin.getHeures() * 60) + this.hFin.getMinutes() + (this.hFin.getSecondes()/60)
+                - (this.hDebut.getHeures() * 60) + this.hDebut.getMinutes() + (this.hDebut.getSecondes()/60);
+    }
 }
