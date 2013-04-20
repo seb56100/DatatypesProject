@@ -12,11 +12,11 @@ public class Pays {
     
     private String nom;
     private int nbChiffreTel;
-    private int indicateurTel;
+    private int indicatifTel;
     
-    public Pays(String nom, int nbChiffreTel, int indicateurTel){
+    public Pays(String nom, int nbChiffreTel, int indicatifTel){
         this.nom = nom;
-        this.indicateurTel = indicateurTel;
+        this.indicatifTel = indicatifTel;
         this.nbChiffreTel = nbChiffreTel;
     }
 
@@ -24,16 +24,16 @@ public class Pays {
         return nbChiffreTel;
     }
 
-    public int getIndicateurTel() {
-        return indicateurTel;
+    public int getIndicatifTel() {
+        return indicatifTel;
     }
 
     public void setNbChiffreTel(int nbChiffreTel) {
         this.nbChiffreTel = nbChiffreTel;
     }
 
-    public void setIndicateurTel(int indicateurTel) {
-        this.indicateurTel = indicateurTel;
+    public void setIndicatifTel(int indicateurTel) {
+        this.indicatifTel = indicatifTel;
     }
 
     public String getNom() {
@@ -43,6 +43,4 @@ public class Pays {
     public void setNom(String nom) {
         this.nom = nom;
     }
-    
-    
 }

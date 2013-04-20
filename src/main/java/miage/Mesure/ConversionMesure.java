@@ -12,8 +12,7 @@ public class ConversionMesure {
     
     private double echelle;
     private Unite base, resultat;
-    
-    
+        
     public ConversionMesure(double echelle, Unite base, Unite resultat){
         this.echelle = echelle;
         this.base = base;
@@ -36,11 +35,6 @@ public class ConversionMesure {
         return resultat;
     }
     
-    
-    public void convertir(){
-        
-    }
-
     public double getEchelle() {
         return echelle;
     }
@@ -49,4 +43,8 @@ public class ConversionMesure {
         this.echelle = echelle;
     }
     
+    //  Conversion de l'unité de base en l'unité de résultat
+    public double convertir(double quantite){
+        return quantite * echelle;
+    }
 }

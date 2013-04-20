@@ -23,7 +23,4 @@ public class Telephone {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-    
-    
-    
 }

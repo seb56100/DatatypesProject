@@ -17,6 +17,10 @@ import static org.junit.Assert.*;
  */
 public class ConversionMesureTest {
     
+    
+    private Unite base, resultat;
+    private ConversionMesure conv;
+    
     public ConversionMesureTest() {
     }
     
@@ -30,6 +34,9 @@ public class ConversionMesureTest {
     
     @Before
     public void setUp() {
+        base = new Unite("Mètre");
+        base = new Unite("Centimètre");
+        conv = new ConversionMesure(100, base, resultat);
     }
     
     @After
@@ -91,18 +98,6 @@ public class ConversionMesureTest {
     }
 
     /**
-     * Test of convertir method, of class ConversionMesure.
-     */
-    @Test
-    public void testConvertir() {
-        System.out.println("convertir");
-        ConversionMesure instance = null;
-        instance.convertir();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of getEchelle method, of class ConversionMesure.
      */
     @Test
@@ -127,5 +122,17 @@ public class ConversionMesureTest {
         instance.setEchelle(echelle);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of convertirResultatBase method, of class ConversionMesure.
+     */
+    @Test
+    public void testConvertir() {
+        System.out.println("convertirResultatBase");
+        double quantite = 10.0;
+        double expResult = 1000.0;
+        double result = conv.convertir(quantite);
+        assertEquals(expResult, result, 0.0);
     }
 }

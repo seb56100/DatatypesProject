@@ -18,7 +18,6 @@ public class InfoPerso {
         this.adresse = adresse;
         this.adresseMail = adresseMail;
         this.telephone = telephone;
-        
     }
 
     public Adresse getAdresse() {
@@ -44,6 +43,4 @@ public class InfoPerso {
     public void setTelephone(Telephone telephone) {
         this.telephone = telephone;
     }
-    
-    
 }

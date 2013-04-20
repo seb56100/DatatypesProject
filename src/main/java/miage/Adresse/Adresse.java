@@ -10,18 +10,18 @@ package miage.Adresse;
  */
 public class Adresse {
     
-    private Lieux lieu;
     private int numero;
+    private Lieux lieu;
     private String nom;
     private Ville ville;
     
-    public Adresse(Ville ville, int numero, Lieux lieu, String nom){
-        this.lieu = lieu;
+    public Adresse(int numero, Lieux lieu, String nom, Ville ville) {
         this.numero = numero;
+        this.lieu = lieu;
         this.nom = nom;
         this.ville = ville;
     }
-
+    
     public void setVille(Ville ville) {
         this.ville = ville;
     }
@@ -54,5 +54,11 @@ public class Adresse {
         this.nom = nom;
     }
     
-    
+    //  Retourne l'adresse sous forme d'une chaine
+    @Override
+    public String toString() {
+        return this.numero + ", " + this.lieu + " " + this.nom + ", " +
+               this.ville.getCodePostal() + " " + this.ville.getNom() + ", " +
+               this.ville.getPays().getNom() + ".";
+    }
 }

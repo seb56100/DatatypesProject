@@ -9,13 +9,14 @@ package miage.Adresse;
  * @author seb56100
  */
 public class Ville {
+    
     private String nom;
-    private int indicateurTel;
+    private int codePostal;
     private Pays pays;
     
-    public Ville(String nom, int indicateurTel, Pays pays){
+    public Ville(String nom, int codePostal, Pays pays){
         this.nom = nom;
-        this.indicateurTel = indicateurTel;
+        this.codePostal = codePostal;
         this.pays = pays;
     }
     
@@ -35,14 +36,11 @@ public class Ville {
         return pays;
     }
 
-    public void setIndicateurTel(int indicateurTel) {
-        this.indicateurTel = indicateurTel;
+    public void setCodePostal(int codePostal) {
+        this.codePostal = codePostal;
     }
 
-    public int getIndicateurTel() {
-        return indicateurTel;
+    public int getCodePostal() {
+        return codePostal;
     }
-    
-    
-    
 }

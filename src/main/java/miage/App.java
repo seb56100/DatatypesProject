@@ -1,5 +1,9 @@
 package miage;
 
+import miage.Adresse.Adresse;
+import miage.Adresse.Lieux;
+import miage.Adresse.Pays;
+import miage.Adresse.Ville;
 import miage.Temporel.Evenement;
 import miage.Temporel.Heure;
 import miage.Temporel.Intervalle;
@@ -12,7 +16,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        Evenement ev = new Evenement("Forum MIAGE", "15/11/2012", "Faculté des sciences", new Intervalle(new Heure(9,0), new Heure(13,0)));
-        System.out.println(ev.detailsEvenements());
+        Adresse a = 
+        a = new Adresse (2, Lieux.Rue, "Kervegan", new Ville("Nantes", 44000, new Pays("France", 10, 33)));
+        
+        System.out.println(a.toString());
     }
 }

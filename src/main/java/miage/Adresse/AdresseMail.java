@@ -34,6 +34,9 @@ public class AdresseMail {
         this.domaine = domaine;
     }
     
-    
-    
+    //  Retourne l'adresse mail en une chaine
+    @Override
+    public String toString() {
+        return nom + "@" + domaine;
+    }
 }
