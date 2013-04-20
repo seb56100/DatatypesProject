@@ -14,12 +14,10 @@ public class Devise {
 
     private String nom;
     private String pays;
-    private Date date;
 
-    public Devise(String nom, String pays, Date date) {
+    public Devise(String nom, String pays) {
         this.nom = nom;
         this.pays = pays;
-        this.date = date;
     }
 
     public String getNom() {
@@ -36,13 +34,5 @@ public class Devise {
 
     public void setPays(String pays) {
         this.pays = pays;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 }

@@ -18,6 +18,10 @@ import static org.junit.Assert.*;
  */
 public class TauxConversionTest {
     
+    private Devise deviseIn;
+    private Devise deviseOut;
+    private TauxConversion tauxC;
+    
     public TauxConversionTest() {
     }
     
@@ -31,6 +35,10 @@ public class TauxConversionTest {
     
     @Before
     public void setUp() {
+        deviseIn = new Devise("Euro", "France");
+        deviseOut = new Devise("Dollar", "USA");
+        
+        tauxC = new TauxConversion("Euro - Dollar", (float) 1.3057, "20/04/2013", deviseIn, deviseOut);
     }
     
     @After
@@ -71,9 +79,9 @@ public class TauxConversionTest {
     public void testGetTaux() {
         System.out.println("getTaux");
         TauxConversion instance = null;
-        Float expResult = null;
-        Float result = instance.getTaux();
-        assertEquals(expResult, result);
+        float expResult = 0.0F;
+        float result = instance.getTaux();
+        assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -84,7 +92,7 @@ public class TauxConversionTest {
     @Test
     public void testSetTaux() {
         System.out.println("setTaux");
-        Float taux = null;
+        float taux = 0.0F;
         TauxConversion instance = null;
         instance.setTaux(taux);
         // TODO review the generated test code and remove the default call to fail.
@@ -99,7 +107,7 @@ public class TauxConversionTest {
         System.out.println("getDate");
         TauxConversion instance = null;
         Date expResult = null;
-        Date result = instance.getDate();
+        String result = instance.getDate();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -111,7 +119,7 @@ public class TauxConversionTest {
     @Test
     public void testSetDate() {
         System.out.println("setDate");
-        Date date = null;
+        String date = null;
         TauxConversion instance = null;
         instance.setDate(date);
         // TODO review the generated test code and remove the default call to fail.
@@ -119,70 +127,80 @@ public class TauxConversionTest {
     }
 
     /**
-     * Test of getDeviseEntree method, of class TauxConversion.
+     * Test of getDeviseIn method, of class TauxConversion.
      */
     @Test
-    public void testGetDeviseEntree() {
-        System.out.println("getDeviseEntree");
+    public void testGetDeviseIn() {
+        System.out.println("getDeviseIn");
         TauxConversion instance = null;
         Devise expResult = null;
-        Devise result = instance.getDeviseEntree();
+        Devise result = instance.getDeviseIn();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setDeviseEntree method, of class TauxConversion.
+     * Test of setDeviseIn method, of class TauxConversion.
      */
     @Test
-    public void testSetDeviseEntree() {
-        System.out.println("setDeviseEntree");
-        Devise deviseEntree = null;
+    public void testSetDeviseIn() {
+        System.out.println("setDeviseIn");
+        Devise deviseIn = null;
         TauxConversion instance = null;
-        instance.setDeviseEntree(deviseEntree);
+        instance.setDeviseIn(deviseIn);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getDeviseSortie method, of class TauxConversion.
+     * Test of getDeviseOut method, of class TauxConversion.
      */
     @Test
-    public void testGetDeviseSortie() {
-        System.out.println("getDeviseSortie");
+    public void testGetDeviseOut() {
+        System.out.println("getDeviseOut");
         TauxConversion instance = null;
         Devise expResult = null;
-        Devise result = instance.getDeviseSortie();
+        Devise result = instance.getDeviseOut();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setDeviseSortie method, of class TauxConversion.
+     * Test of setDeviseOut method, of class TauxConversion.
      */
     @Test
-    public void testSetDeviseSortie() {
-        System.out.println("setDeviseSortie");
-        Devise deviseSortie = null;
+    public void testSetDeviseOut() {
+        System.out.println("setDeviseOut");
+        Devise deviseOut = null;
         TauxConversion instance = null;
-        instance.setDeviseSortie(deviseSortie);
+        instance.setDeviseOut(deviseOut);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of convertir method, of class TauxConversion.
+     * Test of convertirInOut method, of class TauxConversion.
      */
     @Test
-    public void testConvertir() {
-        System.out.println("convertir");
-        TauxConversion instance = null;
-        Devise expResult = null;
-        Devise result = instance.convertir();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testConvertirInOut() {
+        System.out.println("convertirInOut");
+        float montant = (float) 1.0;
+        float expResult = (float) 1.3057;
+        float result = tauxC.convertirInOut(montant);
+        assertEquals(expResult, result, 0.0);
+    }
+
+    /**
+     * Test of convertirOutIn method, of class TauxConversion.
+     */
+    @Test
+    public void testConvertirOutIn() {
+        System.out.println("convertirOutIn");
+        float montant = (float) 1.3057;
+        float expResult = (float) 1;
+        float result = tauxC.convertirOutIn(montant);
+        assertEquals(expResult, result, 0.0);
     }
 }
